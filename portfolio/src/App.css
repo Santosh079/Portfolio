@@ -6,6 +6,43 @@ body {
   padding: 0;
 }
 
+/* Define the styling for the normal state */
+.button-container {
+  display: inline-block;
+  margin: 10px;
+}
+
+.button-container button {
+  background-color: #25024f; /* Green background color */
+  border: none;
+  color: white; 
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s; 
+}
+
+/* Define the styling for the hover state */
+.button-container button:hover {
+  background-color: #000000; 
+  animation: scaleUp 0.3s ease; 
+}
+.button-container a:hover{
+  text-decoration: none;
+}
+
+/* Define the scaling animation */
+@keyframes scaleUp {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+
 /* --------------navbar--------------- */
 nav {
   display: flex;
@@ -184,7 +221,7 @@ nav.active .burger div.line3 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to bottom, rgba(60, 1, 82, 0.5), rgba(0,0,0,0.5)), url('boy.jpg');
+  background-image: linear-gradient(to bottom, rgba(60, 1, 82, 0.5), rgba(0,0,0,0.5)), url('E:\programming language\react+vite\Portfolio-1\portfolio\src\assets\boy.jpg');
   background-size: cover;
   background-position: center;
   z-index: -1;
@@ -263,27 +300,22 @@ button a{
   color: #c9c9c9;
   text-decoration: none;
 }
-button:hover {
-  background-color: #4CAF50;
-  color: white;
-  border: 2px solid #4CAF50;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
+Z
 
 /* hr */
 
-.styled-hr {
-  height: 1px;
-  border: none;
-  background-color: #e5e5e5;
-  margin: 0 auto;
-  width: 50%;
+/* CSS for styling the Hrline component */
+.hr-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0; /* Adjust the margin as needed */
+  text-align: center;
 }
 
-.hr-container {
-  text-align: center;
-  margin: 30px 0;
+.styled-hr {
+  width: 50%; /* Adjust the width of the horizontal line */
+  border: 1px solid #ccc; /* Adjust the color of the horizontal line */
 }
 
 
@@ -310,7 +342,7 @@ button:hover {
 
 /* Hire ME */
 .hire-me {
-  background-image: linear-gradient(to bottom, rgba(60, 1, 82, 0.5), rgba(0,0,0,0.5)), url('work.jpg');
+  background-image: linear-gradient(to bottom, rgba(60, 1, 82, 0.5), rgba(0,0,0,0.5)), url('E:\programming language\react+vite\Portfolio-1\portfolio\src\assets\work.jpg');
   background-size: cover;
   background-position: top;
   color: white;
@@ -356,118 +388,89 @@ button:hover {
   text-decoration: none;
 }
 
-.hire-me button:hover {
-  background-color:#ee5300;
-}
 
 
 /* ------youtube section-------- */
-.row-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
- 
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  padding: 50px;
-  display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
-}
-.youtube h2{
-  color: #c9c9c9;
-  text-align: center;
-  font-size: 36px;
-  
-}
-.youtube{
-  background-image: linear-gradient(to bottom, rgba(60, 1, 82, 0.5), rgba(0,0,0,0.5)), url('gaming.jpg');
+/* Styling for the .youtube section */
+.youtube {
+  background-image: linear-gradient(to bottom, rgba(60, 1, 82, 0.7), rgba(0, 0, 0, 0.7)), url('E:\programming language\react+vite\Portfolio-1\portfolio\src\assets\gaming.jpg');
   background-attachment: fixed;
   background-position: center;
-  margin-top: 0%;
-  padding-top: 0%;
   padding: 80px 0;
   font-size: 1.5em;
+  color: #ffffff; /* Your text color */
+  text-align: center;
 }
+
+/* Styling for h2 within .youtube */
+.youtube h2 {
+  font-size: 36px;
+}
+
+/* Styling for .row-section */
+.row-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+  gap: 2px; /* Adjust the gap between columns */
+}
+
+/* Styling for .column */
 .column {
-  background-color: rgba(49, 1, 94, 0.5);
-    border-radius: 10px;
-    padding: 1rem;
-    opacity: 0.7;
+  background-color: #31005e; /* Your specified background color */
+  border-radius: 10px;
+  padding: 1.5rem;
   flex: 1;
-  padding: 40px;
   color: #fff;
   text-align: center;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+  max-width: 400px; /* Adjust the maximum width as needed */
 }
-/* .column:first-child {
-  border-right: 2px solid white;
-} */
 
-
+/* Styling for h3 within .column */
 .column h3 {
   font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* Styling for p within .column */
+.column p {
+  font-size: 16px;
+  line-height: 1.5;
   margin-bottom: 20px;
 }
 
-.column p {
-  font-size: 18px;
-  line-height: 1.5;
-  margin-bottom: 30px;
-}
-
- button {
-  background-color: #ff0000;
+/* Styling for button within .column */
+.column button {
+  cursor: pointer;
   border: none;
   color: white;
   padding: 12px 24px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+  display: block; /* Make the button a block-level element for full width */
+  width: 100%;
+  
   font-weight: bold;
   border-radius: 5px;
-  margin-top: 20px;
+ 
   transition: background-color 0.3s;
-  animation-name: moveInBottom;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
 }
 
- button:hover {
-  background-color: #25024f;
-  border: none;
-  
-}
- a{
-  text-decoration: none;
-}
+/* Media query for smaller screens */
 @media screen and (max-width: 768px) {
   .row-section {
-    grid-template-columns: repeat(1, 1fr);
+    flex-direction: column;
+    align-items: center;
   }
-  .column:first-child {
-    border-right: hidden;
+
+  .column {
+    max-width: 100%; /* Allow columns to take full width on smaller screens */
   }
-  
 }
 
-/* Add some padding to the columns */
-.column {
-  padding: 1rem;
-}
-.column button a {
-  color: white;
-  text-decoration: none;
-}
-
-.column {
-  transition: transform 0.3s ease-in-out;
-}
-
-.column:hover {
-  transform: scale(1.05);
-}
 
 
 
@@ -483,7 +486,7 @@ button:hover {
 
 /* ---------portfolio---------- */
 .Portfolio {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)), url('bird.jpg');
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)), url('E:\programming language\react+vite\Portfolio-1\portfolio\src\assets\bird.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: top;
@@ -519,6 +522,7 @@ button:hover {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  font-weight: bold;
   border-radius: 5px;
   margin-top: 20px;
   transition: background-color 0.3s;
@@ -531,9 +535,7 @@ button:hover {
   text-decoration: none;
   color: #c9c9c9;
 }
-.Portfolio button:hover {
-  background-color: #ee5300;
-}
+
 
 /* footer */
 footer {
@@ -612,13 +614,6 @@ footer {
 /* ------------------portfolio----------------- */
 
 
-
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
 body {
   margin: 0;
