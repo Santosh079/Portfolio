@@ -13,19 +13,25 @@ const projects = {
     },
     {
         title: 'Basic Social Media',
-        description: 'Basic Social media project that provide uploding and displaying posts.',
+        description: 'Basic Social media project that provide uploading and displaying posts.',
         technologies: 'React, CSS, JavaScript',
-        imageUrl: 'https://via.placeholder.com/300',
+        imageUrl: girl, // Use the girl image for this project
         projectLink: 'https://example.com/frontend-project1',
       },
       {
         title: 'Nepali Clock',
-        description: 'Nepali Clock that display time every second',
+        description: 'Nepali Clock that displays time every second',
         technologies: 'React, CSS, JavaScript',
-        imageUrl: 'https://via.placeholder.com/300',
+        imageUrl: girl, // Use the girl image for this project
         projectLink: 'https://example.com/frontend-project1',
       },
-   
+      {
+        title: 'Nepali Clock',
+        description: 'Nepali Clock that displays time every second',
+        technologies: 'React, CSS, JavaScript',
+        imageUrl: girl, // Use the girl image for this project
+        projectLink: 'https://example.com/frontend-project1',
+      },
   ],
 };
 
