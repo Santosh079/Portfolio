@@ -6,6 +6,7 @@ import HireMe from './components/HireMe';
 import Social from './components/Social';
 import Designwork from './components/Designwork';
 import ProjectContainer from './components/ProjectContainer';
+import Footer from './components/Footer';
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
       <HireMe />
       <Social />
       <Designwork />
+      <Footer />
     </div>
   );
 };

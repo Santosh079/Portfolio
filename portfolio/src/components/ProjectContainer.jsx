@@ -25,20 +25,14 @@ const projects = {
         imageUrl: girl, // Use the girl image for this project
         projectLink: 'https://example.com/frontend-project1',
       },
-      {
-        title: 'Nepali Clock',
-        description: 'Nepali Clock that displays time every second',
-        technologies: 'React, CSS, JavaScript',
-        imageUrl: girl, // Use the girl image for this project
-        projectLink: 'https://example.com/frontend-project1',
-      },
+     
   ],
 };
 
 const ProjectContainer = () => {
   return (
     <div className="project-container">
-        <h1>Projects</h1>
+        <h1>Web Projects</h1>
         <hr />
       {Object.keys(projects).map((category, index) => (
         <div key={index} className="category-container">
