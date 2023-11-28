@@ -1,5 +1,6 @@
 import React from 'react';
 import two from '../assets/two.png'; 
+import Button from './Button';
 
 const Hero = () => {
     return (
@@ -12,7 +13,7 @@ const Hero = () => {
                 <img src={two} alt="Santosh Subedi" />
                 <p style={{ opacity: 0.7 }}>The One Who Is</p>
                 <p style={{ opacity: 0.7 }}>Designer | Developer | Creator</p>
-                <button><a href="about.html">More</a></button>
+                <Button name = "More"/>
             </div>
         </div>
     );

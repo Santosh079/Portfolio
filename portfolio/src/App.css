@@ -261,21 +261,7 @@ img {
   margin-top: 0;
   font-weight: 400;}
 
-.content button {
-  background-color: #25024f;
-  color: white;
-  border: none;
-  font-size: 1rem;
-  cursor: pointer;
-  max-width: 200px;
 
-  margin-top: 20px; /* add margin to space it out from the other content */
-  display: flex; /* center button vertically */
-  align-items: center; /* center button vertically */
-}
-.content button:hover{
-  background-color: #ee5300;
-}
 
 @media only screen and (max-width: 768px) {
   .landing-page {
@@ -309,7 +295,7 @@ Z
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0; /* Adjust the margin as needed */
+  margin: 20px 10; /* Adjust the margin as needed */
   text-align: center;
 }
 
@@ -318,6 +304,9 @@ Z
   border: 1px solid #ccc; /* Adjust the color of the horizontal line */
 }
 
+  hr {
+    margin: 1rem auto;
+}
 
 /* social */
 
@@ -405,6 +394,7 @@ Z
 /* Styling for h2 within .youtube */
 .youtube h2 {
   font-size: 36px;
+  font-weight: bold;
 }
 
 /* Styling for .row-section */
@@ -1137,16 +1127,109 @@ flex-direction: column;
 
 
 
-/* portfolio page animation */
-
-
-
-.fade-in {
-  opacity: 0;
-  animation: fade-in-animation 1.5s ease-in forwards;
+/* CSS for styling the ProjectContainer component */
+.project-container {
+  padding: 60px 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(to bottom, rgba(60, 1, 82, 0.5), rgba(0,0,0,0.5)), url('E:\programming language\react+vite\Portfolio-1\portfolio\src\assets\loki joker.png');
+  color: #fff;
+}
+.project-container h1{
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px;
+}
+.category-container {
+  margin-bottom: 10px;
 }
 
-@keyframes fade-in-animation {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.category-title {
+  display: none;
 }
+
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* Ensure the container takes up the full width on smaller screens */
+@media screen and (max-width: 768px) {
+  .project-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+/* CSS for styling the ProjectCard component */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  background-color: #25024f;
+  opacity: 0.8;
+  color: #fff;
+  width: 400px;
+
+  /* Ensure the card takes up the full width on smaller screens */
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.project-image {
+  width: 70%;
+  height: 70%;
+  border-bottom: 1px solid #ccc;
+}
+
+.project-content {
+  padding: 10px;
+  text-align: center;
+}
+
+.project-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  font-size: 16px;
+  color: #ccc; /* Adjust text color as needed */
+  margin-bottom: 10px;
+}
+
+.project-technologies {
+  font-size: 14px;
+  color: #888; /* Adjust text color as needed */
+  margin-bottom: 10px;
+}
+
+.project-link {
+  background-color: #1A1A1A;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+  padding: 5px;
+}
+
+.project-link:hover {
+  background-color: #25024f;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+

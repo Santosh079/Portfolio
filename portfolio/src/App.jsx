@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import HireMe from './components/HireMe';
 import Social from './components/Social';
 import Designwork from './components/Designwork';
+import ProjectContainer from './components/ProjectContainer';
 
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
     <div>
       <Navbar />
       <Hero />
+      <ProjectContainer />
       <HireMe />
       <Social />
       <Designwork />
