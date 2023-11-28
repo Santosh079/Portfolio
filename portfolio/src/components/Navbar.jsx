@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import logome from '../assets/logome.png';
+import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
@@ -18,7 +19,7 @@ const Navbar = () => {
       </div>
       <ul className={`nav-links ${isActive ? 'show' : ''}`}>
         <li><a href="/" onClick={() => setIsActive(false)}>Home</a></li>
-        <li><a href="/portfolio" onClick={() => setIsActive(false)}>Gallery</a></li>
+        <li><Link to="/gallery" onClick={() => setIsActive(false)}>Gallery</Link></li>
         <li><a href="/faq" onClick={() => setIsActive(false)}>FAQ</a></li>
         <li><a href="/contact" onClick={() => setIsActive(false)}>Contact</a></li>
         <li><a href="/about" onClick={() => setIsActive(false)}>About</a></li>

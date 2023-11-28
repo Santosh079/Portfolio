@@ -7,6 +7,7 @@ import Social from './components/Social';
 import Designwork from './components/Designwork';
 import ProjectContainer from './components/ProjectContainer';
 import Footer from './components/Footer';
+import { Outlet } from 'react-router-dom';
 
 
 const App = () => {
