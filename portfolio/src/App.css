@@ -190,7 +190,7 @@ ul {
 /* -----------into----------- */
 .landing-page {
   position: relative;
-  height: 100vh;
+  height: 70vh;
   color: #ffffff;
   flex-direction: column;
   justify-content: center;
@@ -1108,25 +1108,29 @@ flex-direction: column;
 }
 
 
-
 /* CSS for styling the ProjectContainer component */
 .project-container {
+  position: relative;
+  overflow: hidden;
   padding: 60px 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-image: linear-gradient(to bottom, rgba(60, 1, 82, 0.9), rgba(0,0,0,0.7)), url('E:\programming language\react+vite\Portfolio-1\portfolio\src\assets\loki joker.png');
+  background-image: linear-gradient(to bottom, rgba(60, 1, 82, 0.9), rgba(0, 0, 0, 0.7)),
+    url('E:\programming language\react+vite\Portfolio-1\portfolio\src\assets\loki joker.png');
   color: #fff;
-  
-  background-size: cover; /* Ensure the background image covers the whole container */
+  background-size: cover;
   background-position: center;
 }
-.project-container h1{
+
+.project-container h1 {
   font-size: 36px;
   font-weight: bold;
   text-align: center;
   margin: 20px;
 }
+
 .category-container {
   margin-bottom: 10px;
+  position: relative; /* Ensure relative positioning for absolute positioning within */
 }
 
 .category-title {
@@ -1135,8 +1139,25 @@ flex-direction: column;
 
 .project-cards {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 15px;
+  padding: 15px;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: transparent transparent; /* For Firefox */
+}
+
+.project-cards::-webkit-scrollbar {
+  width: 5px;
+}
+
+.project-cards::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.project-cards::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 
 /* Ensure the container takes up the full width on smaller screens */
@@ -1145,7 +1166,58 @@ flex-direction: column;
     flex-direction: column;
     align-items: center;
   }
+  .project-cards {
+    flex-wrap: nowrap;
+  }
 }
+
+.project-card {
+  flex: 0 0 300px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:not(:first-of-type) {
+  opacity: 0.5;
+}
+
+.nav-button {
+  position: absolute;
+  bottom: 10px; /* Adjust as needed */
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+  color: #25024f;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.left-button {
+  left: 10px;
+  margin: 10px 50px;
+}
+
+.right-button {
+  right: 10px;
+  margin: 10px 50px;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+
+
 
 
 /* CSS for styling the ProjectCard component */
@@ -1155,6 +1227,7 @@ flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 350px;
+  width: 400px;
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
