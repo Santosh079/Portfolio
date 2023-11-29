@@ -691,95 +691,55 @@ main {
 
 
 
+/* FAQPage styles */
 
-.faq h1 {
-  text-align: center;
-  margin-bottom: 50px;
-  margin-top: 70px;
-  font-size: 2rem;
-  color: #fcfcfd;
-  text-shadow: 1px 1px #c0c0c0;
-}
-
-.faq h2 {
-  color: #ffffff;
-  font-size: 1.2rem;
-  margin-top: 50px;
-}
-.faq h2:hover {
-  color: #fc4d02;
-  cursor: pointer;
-}
-.faq p {
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 50px;
-  color: #fff;
-}
-
-a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.answer {
-  background-color: rgba(34, 0, 77, 0.8);
-  padding: 20px;
-  margin-bottom: 50px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-h2:hover + .answer {
-  opacity: 1;
-}
-@keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-.answer:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-.answer a:hover {
-  color: #f39c12;
-}
-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-}
-.modal {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.faq-page {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 30px;
   background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}.close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #a0a0a0;
-  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.faq{
-  align-items: self-start;
-  text-align: left;
+
+.page-title {
+  color: wheat;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.divider {
+  border: 1px solid #ddd;
+}
+
+/* FAQSection styles */
+
+.faq-section {
+  cursor: pointer;
+  margin: 30px;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.faq-section:hover {
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.answers {
+  color: #343434;
+  margin-top: 10px;
+}
+
+.open {
+  background-color: #f9f9f9;
 }
 
 
