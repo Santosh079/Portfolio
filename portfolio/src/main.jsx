@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Gallery from './components/Gallary.jsx';
 import FAQPage from './components/FAQPage.jsx';
+import ContactUsPage from './components/ContactUsPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: '/faq',
     element: <FAQPage />,
+  },
+  {
+    path: '/contact',
+    element: <ContactUsPage />,
   },
 ]);
 

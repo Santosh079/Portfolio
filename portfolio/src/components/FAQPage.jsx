@@ -1,7 +1,7 @@
 import React from 'react';
 import FAQSection from './FAQSection';
 import Layout from './layout/Layout';
-import '../styles/FAQPage.css';
+
 
 const FAQPage = () => {
   return (
