@@ -13,16 +13,16 @@ const Navbar = () => {
   return (
     <nav className={`nav ${isActive ? 'active' : ''}`}>
       <div className="logo">
-        <a href="/">
+        <Link to="/">
           <img src={logome} style={{ width: '100%', maxWidth: '100px' }} alt="soobedee logo" />
-        </a>
+        </Link>
       </div>
       <ul className={`nav-links ${isActive ? 'show' : ''}`}>
-        <li><a href="/" onClick={() => setIsActive(false)}>Home</a></li>
+        <li><Link to="/" onClick={() => setIsActive(false)}>Home</Link></li>
         <li><Link to="/gallery" onClick={() => setIsActive(false)}>Gallery</Link></li>
-        <li><a href="/faq" onClick={() => setIsActive(false)}>FAQ</a></li>
-        <li><a href="/contact" onClick={() => setIsActive(false)}>Contact</a></li>
-        <li><a href="/about" onClick={() => setIsActive(false)}>About</a></li>
+        <li><Link to="/faq" onClick={() => setIsActive(false)}>FAQ</Link></li>
+        <li><Link to="/contact" onClick={() => setIsActive(false)}>Contact</Link></li>
+        <li><Link to="/about" onClick={() => setIsActive(false)}>About</Link></li>
       </ul>
       <div className={`burger ${isActive ? 'active' : ''}`} onClick={handleToggle}>
         <div className="line1"></div>

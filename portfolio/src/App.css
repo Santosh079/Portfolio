@@ -588,27 +588,11 @@ footer {
 
 
 body {
-  margin: 0;
-      padding: 0;
-      background-image: linear-gradient(to bottom, rgba(60, 1, 82, 0.5), rgba(0,0,0,0.5)), url('boy.jpg');
+
+      background-image: linear-gradient(to bottom, rgba(60, 1, 82, 0.5), rgba(0,0,0,0.5)), url('src/assets/boy.jpg');
       background-size: cover;
       background-position: left;
       z-index: -1;
-}
-
-header {
-  background-color: #1A1A1A;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-.main h1 {
-  text-align: center;
-  font-size: 48px;
-  margin: 0;
-  color: #fff;
-  margin-top: 50px;
 }
 
 main {
