@@ -1,9 +1,13 @@
+// Button.jsx
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Button = (props) => {
   return (
     <div className="button-container">
-      <button><a href=".">{props.name}</a></button>
+      <button>
+      <Link to={props.href}>{props.name}</Link>
+      </button>
     </div>
   )
 }

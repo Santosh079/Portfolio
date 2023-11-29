@@ -15,9 +15,7 @@ const Gallery = () => {
     }}>
       MY ART PORTFOLIO
     </h1>
-      <div className="hr-container">
-        <hr className="styled-hr" />
-      </div>
+      
       <div id="gallery">
         {Artwork.map((artwork, index) => (
           <ArtworkContainer key={index} imageUrl={artwork.imageUrl} />

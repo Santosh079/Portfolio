@@ -20,11 +20,11 @@ const projects = {
       projectLink: 'https://example.com/frontend-project1',
     },
     {
-      title: 'Nepali Clock',
-      description: 'Nepali Clock that displays time every second',
+      title: 'Portfolio',
+      description: 'My personal portfolio made to show project',
       technologies: 'React, CSS, JavaScript',
       imageUrl: girl,
-      projectLink: 'https://example.com/frontend-project2',
+      projectLink: 'https://github.com/Santosh079/Portfolio',
     },
     {
       title: 'Nepali Clock',
@@ -69,6 +69,7 @@ const ProjectContainer = () => {
   };
 
   return (
+    
     <div className="project-container">
       <h1>Web Projects</h1>
       <hr />
@@ -81,6 +82,7 @@ const ProjectContainer = () => {
           <Project key={index} {...project} />
         ))}
       </div>
+     
       <button className="nav-button right-button" onClick={scrollRight} disabled={isAtEnd}>
       <FaCaretSquareRight />
       </button>
