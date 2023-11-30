@@ -30,6 +30,7 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
+            <hr style={{margin: "30px"}}/>
             <div className="footer-bottom">
                 <p>&copy; 2023 Santosh. All rights reserved.</p>
             </div>

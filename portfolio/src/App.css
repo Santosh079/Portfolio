@@ -45,6 +45,7 @@ body {
 
 /* --------------navbar--------------- */
 nav {
+  animation: fadeIn 1s ease-in-out;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -189,6 +190,7 @@ ul {
 
 /* -----------into----------- */
 .landing-page {
+  animation: fadeIn 1s ease-in-out;
   position: relative;
   height: 70vh;
   color: #ffffff;
@@ -214,6 +216,7 @@ background-image.no-scroll {
 }
 
 .content {
+  animation: fadeIn 1s ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -300,6 +303,7 @@ Z
 }
 
 .social-icon {
+  transition: transform 0.3s ease, color 0.3s ease, opacity 0.3s ease;
   font-size: 2rem;
   color: aliceblue;
   transition: all 0.3s ease;
@@ -308,6 +312,7 @@ Z
 .social-icon:hover {
   transform: translateY(-5px);
   color: #ee5300;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 
@@ -694,6 +699,7 @@ main {
 /* FAQPage styles */
 
 .faq-page {
+  animation: fadeIn 1s ease-in-out;
   max-width: 800px;
   margin: 20px auto;
   padding: 30px;
@@ -749,6 +755,7 @@ main {
 /* ContactUsPage styles */
 
 .contact-page {
+  animation: fadeIn 1s ease-in-out;
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
@@ -809,6 +816,7 @@ button:hover {
 /* AboutUsPage styles */
 
 .about {
+  animation: fadeIn 1s ease-in-out;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -840,6 +848,7 @@ p {
 
 /* CSS for styling the ProjectContainer component */
 .project-container {
+  animation: fadeIn 1s ease-in-out;
   position: relative;
   overflow: hidden;
   padding: 60px 10px;
@@ -860,7 +869,7 @@ p {
 
 .category-container {
   margin-bottom: 10px;
-  position: relative; /* Ensure relative positioning for absolute positioning within */
+  position: relative;
 }
 
 .category-title {
@@ -874,8 +883,8 @@ p {
   scroll-snap-type: x mandatory;
   gap: 15px;
   padding: 15px;
-  scrollbar-width: thin; /* For Firefox */
-  scrollbar-color: transparent transparent; /* For Firefox */
+  scrollbar-width: thin; 
+  scrollbar-color: transparent transparent; 
 }
 
 .project-cards::-webkit-scrollbar {
@@ -907,13 +916,10 @@ p {
   transition: opacity 0.3s ease;
 }
 
-.project-card:not(:first-of-type) {
-  opacity: 0.5;
-}
 
 .nav-button {
   position: absolute;
-  bottom: 10px; /* Adjust as needed */
+  bottom: 10px; 
   width: 30px;
   height: 30px;
   background-color: rgba(255, 255, 255, 0.7);
@@ -923,7 +929,7 @@ p {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 80px;
   color: #25024f;
   transition: background-color 0.3s ease;
 }
@@ -952,6 +958,7 @@ body {
 
 /* CSS for styling the ProjectCard component */
 .project-card {
+  animation: fadeIn 1s ease-in-out;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -980,6 +987,7 @@ body {
   position: relative;
   z-index: 1; /* Ensure the content is on top of the background card */
   text-align: center;
+  animation: fadeIn 1s ease-in-out;
   padding: 20px;
 }
 
@@ -1019,4 +1027,49 @@ body {
 .project-card:hover {
   transform: scale(1.05);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* Add this keyframe for fade in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Add this keyframe for fade out */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Apply fade-in animation to elements */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Apply fade-out animation to elements */
+.fade-out {
+  animation: fadeOut 1s ease-in-out;
+}
+
+
+
+
 

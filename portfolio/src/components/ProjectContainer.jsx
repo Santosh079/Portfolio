@@ -58,13 +58,13 @@ const ProjectContainer = () => {
 
   const scrollLeft = () => {
     if (projectContainerRef.current) {
-      projectContainerRef.current.scrollLeft -= 300; // Adjust the scroll amount
+      projectContainerRef.current.scrollLeft -= 300;
     }
   };
 
   const scrollRight = () => {
     if (projectContainerRef.current) {
-      projectContainerRef.current.scrollLeft += 300; // Adjust the scroll amount
+      projectContainerRef.current.scrollLeft += 300;
     }
   };
 
@@ -73,7 +73,7 @@ const ProjectContainer = () => {
     <div className="project-container">
       <h1>Web Projects</h1>
       <hr />
-      {/* Navigation buttons */}
+   
       <button className="nav-button left-button" onClick={scrollLeft} disabled={isAtStart}>
       <FaCaretSquareLeft />
       </button>
