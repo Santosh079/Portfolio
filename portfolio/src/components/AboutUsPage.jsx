@@ -1,8 +1,21 @@
 import React from 'react';
 import Layout from './layout/Layout';
+import { Helmet } from 'react-helmet';
 
 const AboutUsPage = () => {
   return (
+    <>
+    <Helmet>
+      <title>Santosh Subedi - Web Developer | Graphic Designer | Creator</title>
+      <meta
+          name="description"
+          content="Meet Santosh Subedi, a versatile individual embracing the roles of Front-End Web Developer, Graphic Designer, and Creator. With a belief that creativity knows no bounds, I strive to craft visually stunning websites and graphic designs that effectively convey messages. Explore my journey of blending technology and artistry with dedication and a commitment to exceeding expectations."
+        />
+         <meta
+          name="keyword"
+          content="Santosh Subedi, React Js, React developer, frontend developer, Web Developer, Graphic Designer, Creator, Front-End Web Developer, Visual Experiences, Functional Websites, Beautiful Designs, Creative Approach, Dedication, Exceeding Expectations, Technology and Artistry, Versatile Individual."
+        />
+    </Helmet>
     <Layout>
       <section className="about">
         <div className="profile">
@@ -22,6 +35,7 @@ const AboutUsPage = () => {
         </div>
       </section>
     </Layout>
+    </>
   );
 };
 

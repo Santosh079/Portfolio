@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Layout from './layout/Layout';
+import { Helmet } from 'react-helmet';
 
 
 const ContactUsPage = () => {
@@ -22,6 +23,19 @@ const ContactUsPage = () => {
   };
 
   return (
+    <>
+        <Helmet>
+        <title>Get in Touch - Connect with Santosh Subedi, Web Developer, and Graphic Designer</title>
+        <meta
+          name="description"
+          content="Contact Santosh Subedi for collaborations, inquiries, or to discuss your next creative project. Whether you're looking for a web developer or a graphic designer, I'm here to bring your vision to life. Reach out and let's embark on a journey of turning ideas into extraordinary digital experiences."
+        />
+        <meta
+          name="keyword"
+          content="Contact Santosh Subedi, Web Developer, Graphic Designer, Collaboration Inquiries, Creative Project Discussions, Digital Experiences, Get in Touch, Contact Form, Professional Connection.
+        "
+        />
+      </Helmet>
     <Layout>
       <div className="contact-page">
         <h1 className="page-title">Contact Us</h1>
@@ -67,6 +81,7 @@ const ContactUsPage = () => {
         </form>
       </div>
     </Layout>
+    </>
   );
 };
 
