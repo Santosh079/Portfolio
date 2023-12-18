@@ -6,6 +6,13 @@ import { FaCaretSquareLeft, FaCaretSquareRight } from "react-icons/fa";
 const projects = {
   frontend: [
     {
+      title: 'BCA Notes',
+      description: 'Createde React Project to all BCA student where students can actually find BCA Related Notes.',
+      technologies: 'React, CSS, JavaScript',
+      imageUrl: girl,
+      projectLink: 'https://bcanotesnepal.netlify.app/',
+    },
+    {
       title: 'E-commerce website',
       description: 'E-commerce website, fetches product details from API',
       technologies: 'React, CSS, JavaScript',
